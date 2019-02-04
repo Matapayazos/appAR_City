@@ -1,0 +1,25 @@
+
+<ion-header>
+<ion-navbar>
+<ion-title>
+             Cuenca-ARS
+</ion-title>
+</ion-navbar>
+</ion-header>
+<ion-content padding>
+    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+        <ion-list>
+            <button  class="button" ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+                <li> {{ item }}</li>
+            </button> 
+         </ion-list>
+  <h1>Descubrir</h1> 
+    <ion-list >
+        <button ion-item *ngFor="let resultado of resultados" >
+         {{resultado.nombre}} : {{resultado.descripcion}}
+        </button>
+     </ion-list>
+  
+<button ion-button color="light" (click)="GoIntro()">Cartas </button>
+<button ion-button color="light" (click)="GoMapa()">Mapa </button>
+</ion-content>

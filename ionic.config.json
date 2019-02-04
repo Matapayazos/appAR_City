@@ -1,0 +1,7 @@
+{
+  "name": "appdis",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
