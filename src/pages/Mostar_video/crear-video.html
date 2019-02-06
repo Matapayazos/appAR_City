@@ -1,0 +1,29 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Crearcion de Video</ion-title>
+  </ion-navbar>
+</ion-header>
+  <ion-list>
+
+  <ion-item >
+  <ion-label floating>Codigo:</ion-label>
+  <ion-input type="text" value="" [(ngModel)]="codigo"></ion-input>
+  </ion-item>
+  <ion-item>
+  <ion-label floating>Decripcion:</ion-label>
+  <ion-input type="text" value="" [(ngModel)]="descripcion"></ion-input>
+  </ion-item>
+  <ion-item>
+  <ion-label floating>Nombre:</ion-label>
+  <ion-input type="text" value="" [(ngModel)]="nombre"></ion-input>
+  </ion-item>
+  <ion-item>
+  <ion-label floating>Ruta:</ion-label>
+  <ion-input type="text" value="" [(ngModel)]="ruta"></ion-input>
+  </ion-item>
+
+  <button ion-button color="light" (click)="add()">Crear</button>
+
+  </ion-list>
