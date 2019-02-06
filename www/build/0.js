@@ -1,14 +1,14 @@
 webpackJsonp([0],{
 
-/***/ 276:
+/***/ 277:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CrearVideoPageModule", function() { return CrearVideoPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MostrarPageModule", function() { return MostrarPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__crear_video__ = __webpack_require__(277);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mostrar__ = __webpack_require__(279);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,36 +18,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var CrearVideoPageModule = /** @class */ (function () {
-    function CrearVideoPageModule() {
+var MostrarPageModule = /** @class */ (function () {
+    function MostrarPageModule() {
     }
-    CrearVideoPageModule = __decorate([
+    MostrarPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__crear_video__["a" /* CrearVideoPage */],
+                __WEBPACK_IMPORTED_MODULE_2__mostrar__["a" /* MostrarPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__crear_video__["a" /* CrearVideoPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__mostrar__["a" /* MostrarPage */]),
             ],
         })
-    ], CrearVideoPageModule);
-    return CrearVideoPageModule;
+    ], MostrarPageModule);
+    return MostrarPageModule;
 }());
 
-//# sourceMappingURL=crear-video.module.js.map
+//# sourceMappingURL=mostrar.module.js.map
 
 /***/ }),
 
-/***/ 277:
+/***/ 279:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CrearVideoPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MostrarPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(100);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(201);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -59,52 +56,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-
-
 /**
- * Generated class for the CrearVideoPage page.
+ * Generated class for the MostrarPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var CrearVideoPage = /** @class */ (function () {
-    function CrearVideoPage(navCtrl, navParams, http) {
+var MostrarPage = /** @class */ (function () {
+    function MostrarPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.http = http;
-        this.resultados = "";
-        this.codigo = "";
-        this.descripcion = "";
-        this.nombre = "";
-        this.ruta = "";
-        this.data = " codigo : 5 , descripcion : Un video de la Maria Auxiliadora , nombre : Maria Auxiliadora , ruta: /hola/jojo/mojo/lolo/Maria Auxiliadora.mp4 ";
     }
-    CrearVideoPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad CrearVideoPage');
+    MostrarPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad MostrarPage');
     };
-    CrearVideoPage.prototype.add = function (data) {
-        var _this = this;
-        return new Promise(function (resolve) {
-            _this.http.post("http://localhost:8080/Tesis/srv/videos/insert", data)
-                .map(function (res) { return res.json(); })
-                .subscribe(function (data) {
-                resolve(data);
-            }, function (err) {
-                console.log(err);
-            });
-        });
-    };
-    CrearVideoPage = __decorate([
+    MostrarPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-crear-video',template:/*ion-inline-start:"/Users/alex/Documents/GitHub/appAR_City/src/pages/crear-video/crear-video.html"*/'\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Crearcion de Video</ion-title>\n  </ion-navbar>\n</ion-header>\n  <ion-list>\n\n  <ion-item >\n  <ion-label floating>Codigo:</ion-label>\n  <ion-input type="text" value="" [(ngModel)]="codigo"></ion-input>\n  </ion-item>\n  <ion-item>\n  <ion-label floating>Decripcion:</ion-label>\n  <ion-input type="text" value="" [(ngModel)]="descripcion"></ion-input>\n  </ion-item>\n  <ion-item>\n  <ion-label floating>Nombre:</ion-label>\n  <ion-input type="text" value="" [(ngModel)]="nombre"></ion-input>\n  </ion-item>\n  <ion-item>\n  <ion-label floating>Ruta:</ion-label>\n  <ion-input type="text" value="" [(ngModel)]="ruta"></ion-input>\n  </ion-item>\n\n  <button ion-button color="light" (click)="add()">Crear</button>\n\n  </ion-list>'/*ion-inline-end:"/Users/alex/Documents/GitHub/appAR_City/src/pages/crear-video/crear-video.html"*/,
+            selector: 'page-mostrar',template:/*ion-inline-start:"/Users/alex/Documents/GitHub/appAR_City/src/pages/mostrar/mostrar.html"*/'<ion-header>\n    <ion-navbar color="primary">\n      <ion-title>\n        Demo 102\n      </ion-title>\n    </ion-navbar>\n  </ion-header>\n  \n  <ion-content padding>\n    <button ion-button block (click)="getPicture()">Toma una foto</button>\n    <img [src]="image" *ngIf="image" />\n  </ion-content>\n'/*ion-inline-end:"/Users/alex/Documents/GitHub/appAR_City/src/pages/mostrar/mostrar.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]) === "function" && _c || Object])
-    ], CrearVideoPage);
-    return CrearVideoPage;
-    var _a, _b, _c;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
+    ], MostrarPage);
+    return MostrarPage;
 }());
 
-//# sourceMappingURL=crear-video.js.map
+//# sourceMappingURL=mostrar.js.map
 
 /***/ })
 

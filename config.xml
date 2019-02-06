@@ -86,4 +86,5 @@
         <variable name="ANDROID_SUPPORT_V4_VERSION" value="24.1.1+" />
     </plugin>
     <engine name="android" spec="7.1.4" />
+    <plugin name="cordova-plugin-camera" spec="4.0.3" />
 </widget>

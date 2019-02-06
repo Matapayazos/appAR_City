@@ -13,13 +13,13 @@
                 <li> {{ item }}</li>
             </button> 
          </ion-list>
-  <h1>Descubrir</h1> 
+  <h2>Descubrir</h2> 
     <ion-list >
         <button ion-item *ngFor="let resultado of resultados" >
-         {{resultado.nombre}} : {{resultado.descripcion}}
+        <p> {{resultado.nombre}} : {{resultado.descripcion}} </p>
         </button>
      </ion-list>
-  
+<button ion-button color="light" (click)="GoIntro()">    <ion-icon name="photos"></ion-icon> </button> 
 <button ion-button color="light" (click)="GoIntro()"><ion-icon name="albums"></ion-icon> </button>
 
 <button ion-button color="light" (click)="GoMapa()"> <ion-icon  name="map"></ion-icon> </button>

@@ -9,6 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { HttpModule } from '@angular/http';
 import { SocialSharing } from '@ionic-native/social-sharing';
 import { MapaPageModule  } from "../pages/mapa/mapa.module";
+//import {  CameraOriginal } from '@ionic-native/camera';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { MapaPageModule  } from "../pages/mapa/mapa.module";
   ],
   providers: [
     StatusBar,
+    //CameraOriginal,
     SplashScreen,
     SocialSharing,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
