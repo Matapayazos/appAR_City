@@ -1,7 +1,5 @@
 {
-  "name": "appdis",
-  "integrations": {
-    "cordova": {}
-  },
-  "type": "ionic-angular"
+  "name": "AR_Cuenca",
+  "integrations": {},
+  "type": "angular"
 }

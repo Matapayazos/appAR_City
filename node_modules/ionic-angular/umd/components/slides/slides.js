@@ -164,7 +164,7 @@ var __extends = (this && this.__extends) || (function () {
      * ```
      *
      * To see all of the available options, take a look at the
-     * [source for slides](https://github.com/ionic-team/ionic/blob/master/src/components/slides/slides.ts).
+     * [source for slides](https://github.com/ionic-team/ionic/blob/v3/src/components/slides/slides.ts).
      *
      * @demo /docs/demos/src/slides/
      * @see {@link /docs/components#slides Slides Component Docs}

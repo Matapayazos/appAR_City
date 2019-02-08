@@ -107,9 +107,9 @@
      *
      * ```html
      *
-     * <ion-item-sliding (ionSwipe)="delete(item)">
+     * <ion-item-sliding>
      *   <ion-item>Item</ion-item>
-     *   <ion-item-options>
+     *   <ion-item-options (ionSwipe)="delete(item)">
      *     <button ion-button expandable (click)="delete(item)">Delete</button>
      *   </ion-item-options>
      * </ion-item-sliding>

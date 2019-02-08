@@ -252,6 +252,10 @@ export declare class VirtualScroll implements DoCheck, OnChanges, AfterContentIn
      * available for reuse while scrolling. For better performance, it's
      * better to have more cells than what are required to fill the
      * viewable area. Default is `3`.
+     * In case more than one items are rendered per row, bufferRatio
+     * has to account for that and a multiple number should be used.
+     * For example if a single item per row list used 3 as bufferRatio
+     * a 4 item per row list should use 3 * 4 = 12 as buffer ratio.
      */
     bufferRatio: number;
     /**

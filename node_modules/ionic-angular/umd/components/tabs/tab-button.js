@@ -53,7 +53,7 @@ var __extends = (this && this.__extends) || (function () {
         TabButton.decorators = [
             { type: core_1.Component, args: [{
                         selector: '.tab-button',
-                        template: '<ion-icon *ngIf="tab.tabIcon" [name]="tab.tabIcon" [isActive]="tab.isSelected" class="tab-button-icon"></ion-icon>' +
+                        template: '<ion-icon *ngIf="tab.tabIcon" [name]="tab.tabIcon" [attr.aria-hidden]="hasTitle ? \'true\' : null" [isActive]="tab.isSelected" class="tab-button-icon"></ion-icon>' +
                             '<span *ngIf="tab.tabTitle" class="tab-button-text">{{tab.tabTitle}}</span>' +
                             '<ion-badge *ngIf="tab.tabBadge" class="tab-badge" [color]="tab.tabBadgeStyle">{{tab.tabBadge}}</ion-badge>' +
                             '<div class="button-effect"></div>',

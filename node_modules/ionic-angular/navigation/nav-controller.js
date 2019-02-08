@@ -140,7 +140,7 @@
  *
  * ## Pushing a View
  * To push a new view onto the navigation stack, use the `push` method.
- * If the page has an [`<ion-navbar>`](../../navbar/Navbar/),
+ * If the page has an [`<ion-navbar>`](../../components/toolbar/Navbar/),
  * a back button will automatically be added to the pushed view.
  *
  * Data can also be passed to a view by passing an object to the `push` method.
@@ -258,6 +258,7 @@
  *  | `ionViewCanEnter`   | boolean/Promise&lt;void&gt; | Runs before the view can enter. This can be used as a sort of "guard" in authenticated views where you need to check permissions before the view can enter                                                                                                     |
  *  | `ionViewCanLeave`   | boolean/Promise&lt;void&gt; | Runs before the view can leave. This can be used as a sort of "guard" in authenticated views where you need to check permissions before the view can leave                                                                                                     |
  *
+ * Those events are only fired on IonicPage, for classic Angular Component, use [Angular Lifecycle Hooks](https://angular.io/guide/lifecycle-hooks).
  *
  * ## Nav Guards
  *

@@ -48,8 +48,8 @@ var __extends = (this && this.__extends) || (function () {
      * </ion-header>
      *
      * <ion-content>
-     *   <!-- Segment in content -->
-     *   <ion-segment [(ngModel)]="relationship" color="primary" (ionChange)="segmentChanged($event)">
+     *   <!-- Segment in content with material design mode on all devices -->
+     *   <ion-segment [(ngModel)]="relationship" color="primary" mode="md" (ionChange)="segmentChanged($event)">
      *     <ion-segment-button value="friends">
      *       Friends
      *     </ion-segment-button>

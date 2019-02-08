@@ -1,40 +1,28 @@
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-import { SplashScreen } from '@ionic-native/splash-screen';
-import { StatusBar } from '@ionic-native/status-bar';
-import { IntroPageModule  } from "../pages/intro/intro.module";
-import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { RouteReuseStrategy } from '@angular/router';
+
+import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
+import { SplashScreen } from '@ionic-native/splash-screen/ngx';
+import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { HttpModule } from '@angular/http';
-import { SocialSharing } from '@ionic-native/social-sharing';
-import { MapaPageModule  } from "../pages/mapa/mapa.module";
-//import {  CameraOriginal } from '@ionic-native/camera';
+import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
-  declarations: [
-    MyApp,
-    HomePage
-  ],
+  declarations: [AppComponent],
+  entryComponents: [],
   imports: [
     BrowserModule,
-    HttpModule,
-    IntroPageModule,
-    MapaPageModule,
-    IonicModule.forRoot(MyApp),
-
-  ],
-  bootstrap: [IonicApp],
-  entryComponents: [
-    MyApp,
-    HomePage
+    IonicModule.forRoot(),
+    AppRoutingModule,
+    HttpModule
   ],
   providers: [
     StatusBar,
-    //CameraOriginal,
     SplashScreen,
-    SocialSharing,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
-  ]
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+  ],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}
