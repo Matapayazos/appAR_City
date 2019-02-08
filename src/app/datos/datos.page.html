@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Datos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+    <ion-list>
+        <button  class="button" ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+            <li> {{ item }}</li>
+        </button> 
+     </ion-list>
+
+     <ion-list >
+      <button ion-item *ngFor="let resultado of resultados" >
+       {{resultado.nombre}} : {{resultado.descripcion}}
+      </button>
+   </ion-list>
+</ion-content>
